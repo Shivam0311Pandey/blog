@@ -10,6 +10,10 @@
   --Quicksand: "Quicksand", sans-serif;
   background-color: #f5f3f3;
 }
+h2{
+  color: #f1356d;
+  font-size: 1.25rem;
+}
 .navbar{
   padding: 20px;
   display: flex;
@@ -47,8 +51,71 @@
 .blog-preview:hover{
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
+.blog-preview a{
+  text-decoration: none;
+}
 .blog-preview h2{
-  color: #f1356d;
-  font-size: 1.25rem;
   margin-bottom: 8px;
+}
+
+/* Blog details page */
+.blog-details h2{
+  margin-bottom: 10px;
+}
+.blog-details div{
+  margin: 20px 0;
+}
+.blog-details button{
+  color: #f1356d;
+  background: #f5f3f3;
+  border: 1px solid #f1356d ;
+  padding: 3px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.blog-details button:hover{
+  color: #f5f3f3;
+  background: #f1356d;
+}
+
+/* Create new blog */
+.create{
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create h2{
+  margin-bottom: 20px;
+}
+.create label{
+  text-align: left;
+  display: block;
+}
+.create input, .create textarea{
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 6px 10px;
+  border-radius: 2px;
+}
+.create button{
+  background: #f1356d;
+  color: #fff;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 0;
+  margin-top: 10px;
+}
+input:focus, textarea:focus{
+  outline-color: #f1356d3f;
+  outline-width: initial;
+  outline-style: solid;
+}
+
+/* Not-found */
+.not-found img{
+  max-width: 600px;
+  height: auto;
 }

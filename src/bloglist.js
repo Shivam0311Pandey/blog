@@ -1,13 +1,17 @@
-const BlogList = ({blogs, title, handleDelete}) => {
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+const BlogList = ({blogs, title}) => {
+
 
     return (
         <div className="blog-list">
             <h2>{ title }</h2>
             { blogs.map( blog => (
                 <div className="blog-preview" key={blog.id}>
-                    <h2>{ blog.title }</h2>
-                    <i>Written by: { blog.author }</i>
-                    <div><button onClick={() => handleDelete(blog.id)}>delete blog</button></div>
+                    <Link to= {`/blogs/${blog.id}`}>
+                        <h2>{ blog.title }</h2>
+                        <i>Written by: { blog.author[0].toUpperCase() + blog.author.slice(1) }</i>
+                    </Link>
                 </div>
                 ))}
         </div>
